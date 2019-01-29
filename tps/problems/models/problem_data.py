@@ -26,6 +26,7 @@ class ProblemData(git_models.Model):
     score_type_parameters = models.TextField(verbose_name=_("score type parameters"), null=True)
 
     score_precision = models.IntegerField(verbose_name=_("score precision"), default=2)
+    has_grader = models.BooleanField(verbose_name=_("has_grader"), default=True)
 
     checker = ReadOnlyGitToGitForeignKey("Checker", verbose_name=_("checker"), null=True)
 
